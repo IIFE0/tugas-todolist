@@ -1,15 +1,4 @@
 <template>
-  <!-- <h1 v-bind:class="dynamicId">Hello World</h1>
-  <h2
-    v-for="[taskIndex, task] of Object.entries(tasks)"
-    :key="taskIndex"
-    :class="even(taskIndex) ? 'text-blue-500' : 'text-green-500'"
-  >
-    {{ task.title }}
-  </h2>
-  <input v-model="previousValue" />
-  <input v-model="nextValue" />
-  <p>{{ hasil }}</p> -->
   <nav class="flex items-end px-4 py-2 space-x-4">
     <h1 class="text-2xl">TaskList</h1>
     <ul>
@@ -21,7 +10,7 @@
     <div
       v-for="[taskIndex, task] of Object.entries(tasks)"
       :key="taskIndex"
-      class="item-task flex items-start border-b-2 pt-3 pb-4"
+      class="item-task flex items-start border-b-2 pt-3 pb-4 border border-slate-500 px-6 rounded-md mb-4"
     >
       <input
         v-model="task.isDone"
